@@ -5,9 +5,9 @@ import { shallow } from 'enzyme'
 import App from './App'
 
 describe('App', () => {
-  it('should render without crashing', () => {
+  it('should contain a Stoplight', () => {
     const wrapper = shallow(<App />)
 
-    expect(wrapper.find('h1').text()).toEqual('Hello, React!')
+    expect(wrapper.find(Stoplight)).toHaveLength(1)
   })
 })
